@@ -1,0 +1,93 @@
+[
+  {
+    "name": "npm 4.x",
+    "installer": "npm",
+    "args": ["install"],
+    "directory": "npm",
+    "clean": ["nodeModules", "npmCache"]
+  },
+  {
+    "name": "npm 4.x (cached)",
+    "installer": "npm",
+    "args": ["install"],
+    "directory": "npm-cached",
+    "clean": ["nodeModules"]
+  },
+  {
+    "name": "npm 4.x (shrinkpacked)",
+    "installer": "npm",
+    "args": ["install"],
+    "directory": "shrinkpack",
+    "clean": ["nodeModules", "npmCache"]
+  },
+  {
+    "name": "npm 4.x (shrinkpacked, compressed)",
+    "installer": "npm",
+    "args": ["install"],
+    "directory": "shrinkpack-compressed",
+    "clean": ["nodeModules", "npmCache"]
+  },
+  {
+    "name": "yarn",
+    "installer": "yarn",
+    "args": ["install"],
+    "directory": "yarn",
+    "clean": ["nodeModules", "yarnCache", "yarnOffline"]
+  },
+  {
+    "name": "yarn --offline",
+    "installer": "yarn",
+    "args": ["install", "--offline"],
+    "directory": "yarn-offline",
+    "clean": ["nodeModules", "yarnCache"]
+  },
+  {
+    "name": "npm 5.x",
+    "installer": "npm5",
+    "args": ["install"],
+    "directory": "npm",
+    "clean": ["nodeModules", "npm5Cache"]
+  },
+  {
+    "name": "npm 5.x (cached)",
+    "installer": "npm5",
+    "args": ["install"],
+    "directory": "npm-cached",
+    "clean": ["nodeModules", "npm5Cache"]
+  },
+  {
+    "name": "npm 5.x (shrinkpacked)",
+    "installer": "npm5",
+    "args": ["install"],
+    "directory": "shrinkpack",
+    "clean": ["nodeModules", "npm5Cache"]
+  },
+  {
+    "name": "npm 5.x (shrinkpacked, compressed)",
+    "installer": "npm5",
+    "args": ["install"],
+    "directory": "shrinkpack-compressed",
+    "clean": ["nodeModules", "npm5Cache"]
+  },
+  {
+    "name": "pnpm",
+    "installer": "pnpm",
+    "args": ["install"],
+    "directory": "pnpm",
+    "clean": ["nodeModules", "pnpmRegistry", "pnpmStore"]
+  },
+  {
+    "name": "pnpm (cached)",
+    "installer": "pnpm",
+    "args": ["install"],
+    "directory": "pnpm-cached",
+    "clean": ["nodeModules"]
+  },
+  {
+    "name": "pnpm --offline",
+    "installer": "pnpm",
+    "args": ["install", "--offline"],
+    "directory": "pnpm-offline",
+    "clean": ["nodeModules"]
+  }
+]
