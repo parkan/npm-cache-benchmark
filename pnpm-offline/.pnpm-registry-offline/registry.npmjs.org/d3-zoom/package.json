@@ -422,13 +422,37 @@
 				"tarball": "https://registry.npmjs.org/d3-zoom/-/d3-zoom-1.1.4.tgz"
 			},
 			"_hasShrinkwrap": false
+		},
+		"1.2.0": {
+			"name": "d3-zoom",
+			"version": "1.2.0",
+			"dependencies": {
+				"d3-dispatch": "1",
+				"d3-drag": "1",
+				"d3-interpolate": "1",
+				"d3-selection": "1",
+				"d3-transition": "1"
+			},
+			"devDependencies": {
+				"eslint": "3",
+				"package-preamble": "0.1",
+				"rollup": "0.41",
+				"tape": "4",
+				"uglify-js": "^2.8.11"
+			},
+			"directories": {},
+			"dist": {
+				"shasum": "b3231f4f9386241475defe1c557bfd3fde1065fb",
+				"tarball": "https://registry.npmjs.org/d3-zoom/-/d3-zoom-1.2.0.tgz"
+			},
+			"_hasShrinkwrap": false
 		}
 	},
 	"name": "d3-zoom",
 	"dist-tags": {
-		"latest": "1.1.4"
+		"latest": "1.2.0"
 	},
-	"modified": "2017-03-24T15:54:29.315Z",
-	"_etag": "W/\"58d54135-1e28\"",
-	"_lastModified": "Fri, 24 Mar 2017 15:54:29 GMT"
+	"modified": "2017-05-11T15:57:04.193Z",
+	"_etag": "W/\"591489d0-1fd5\"",
+	"_lastModified": "Thu, 11 May 2017 15:57:04 GMT"
 }

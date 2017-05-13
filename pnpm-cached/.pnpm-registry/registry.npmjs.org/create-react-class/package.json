@@ -212,6 +212,7 @@
 				"shasum": "7508ffcad56a0804fb244d6ff70b07648abfe5fb",
 				"tarball": "https://registry.npmjs.org/create-react-class/-/create-react-class-15.5.0.tgz"
 			},
+			"deprecated": "create-react-class has known issues with Browserify before version 15.5.3. Please update create-react-class to 15.5.3 or a newer version.",
 			"_hasShrinkwrap": false
 		},
 		"15.5.1": {
@@ -231,6 +232,7 @@
 				"shasum": "25a138a42d1c9df6d5c70fea29ec6ccf5ae165b8",
 				"tarball": "https://registry.npmjs.org/create-react-class/-/create-react-class-15.5.1.tgz"
 			},
+			"deprecated": "create-react-class has known issues with Browserify before version 15.5.3. Please update create-react-class to 15.5.3 or a newer version.",
 			"_hasShrinkwrap": false
 		},
 		"15.5.2": {
@@ -251,15 +253,37 @@
 				"shasum": "6a8758348df660b88326a0e764d569f274aad681",
 				"tarball": "https://registry.npmjs.org/create-react-class/-/create-react-class-15.5.2.tgz"
 			},
+			"deprecated": "create-react-class has known issues with Browserify before version 15.5.3. Please update create-react-class to 15.5.3 or a newer version.",
+			"_hasShrinkwrap": false
+		},
+		"15.5.3": {
+			"name": "create-react-class",
+			"version": "15.5.3",
+			"dependencies": {
+				"fbjs": "^0.8.9",
+				"loose-envify": "^1.3.1",
+				"object-assign": "^4.1.1"
+			},
+			"devDependencies": {
+				"jest": "^19.0.2",
+				"react": "^15.5.0",
+				"react-addons-test-utils": "^15.5.0",
+				"react-dom": "^15.5.0"
+			},
+			"directories": {},
+			"dist": {
+				"shasum": "fb0f7cae79339e9a179e194ef466efa3923820fe",
+				"tarball": "https://registry.npmjs.org/create-react-class/-/create-react-class-15.5.3.tgz"
+			},
 			"_hasShrinkwrap": false
 		}
 	},
 	"name": "create-react-class",
 	"dist-tags": {
-		"latest": "15.5.2",
+		"latest": "15.5.3",
 		"dev": "15.5.0"
 	},
-	"modified": "2017-04-26T19:36:46.783Z",
-	"_etag": "W/\"5900f6ce-13a9\"",
-	"_lastModified": "Wed, 26 Apr 2017 19:36:46 GMT"
+	"modified": "2017-05-10T00:06:15.480Z",
+	"_etag": "W/\"59125977-1730\"",
+	"_lastModified": "Wed, 10 May 2017 00:06:15 GMT"
 }

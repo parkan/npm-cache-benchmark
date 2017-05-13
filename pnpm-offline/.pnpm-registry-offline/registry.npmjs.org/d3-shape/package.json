@@ -445,13 +445,34 @@
 				"tarball": "https://registry.npmjs.org/d3-shape/-/d3-shape-1.0.6.tgz"
 			},
 			"_hasShrinkwrap": false
+		},
+		"1.1.0": {
+			"name": "d3-shape",
+			"version": "1.1.0",
+			"dependencies": {
+				"d3-path": "1"
+			},
+			"devDependencies": {
+				"d3-polygon": "1",
+				"eslint": "3",
+				"package-preamble": "0.1",
+				"rollup": "0.41",
+				"tape": "4",
+				"uglify-js": "^2.8.11"
+			},
+			"directories": {},
+			"dist": {
+				"shasum": "cdedfee735801e4058b5b31f9a1192b631564f6d",
+				"tarball": "https://registry.npmjs.org/d3-shape/-/d3-shape-1.1.0.tgz"
+			},
+			"_hasShrinkwrap": false
 		}
 	},
 	"name": "d3-shape",
 	"dist-tags": {
-		"latest": "1.0.6"
+		"latest": "1.1.0"
 	},
-	"modified": "2017-03-10T18:25:56.929Z",
-	"_etag": "W/\"58c2efb4-1ef8\"",
-	"_lastModified": "Fri, 10 Mar 2017 18:25:56 GMT"
+	"modified": "2017-05-13T00:46:49.226Z",
+	"_etag": "W/\"59165779-206b\"",
+	"_lastModified": "Sat, 13 May 2017 00:46:49 GMT"
 }

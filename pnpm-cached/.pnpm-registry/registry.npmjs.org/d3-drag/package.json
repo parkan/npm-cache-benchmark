@@ -348,13 +348,34 @@
 				"tarball": "https://registry.npmjs.org/d3-drag/-/d3-drag-1.0.4.tgz"
 			},
 			"_hasShrinkwrap": false
+		},
+		"1.1.0": {
+			"name": "d3-drag",
+			"version": "1.1.0",
+			"dependencies": {
+				"d3-dispatch": "1",
+				"d3-selection": "1"
+			},
+			"devDependencies": {
+				"eslint": "3",
+				"package-preamble": "0.1",
+				"rollup": "0.41",
+				"tape": "4",
+				"uglify-js": "^2.8.11"
+			},
+			"directories": {},
+			"dist": {
+				"shasum": "4a49b4d77a42e9e3d5a0ef3b492b14aaa2e5a733",
+				"tarball": "https://registry.npmjs.org/d3-drag/-/d3-drag-1.1.0.tgz"
+			},
+			"_hasShrinkwrap": false
 		}
 	},
 	"name": "d3-drag",
 	"dist-tags": {
-		"latest": "1.0.4"
+		"latest": "1.1.0"
 	},
-	"modified": "2017-03-10T18:09:54.133Z",
-	"_etag": "W/\"58c2ebf2-18a7\"",
-	"_lastModified": "Fri, 10 Mar 2017 18:09:54 GMT"
+	"modified": "2017-05-11T16:12:31.429Z",
+	"_etag": "W/\"59148d6f-1a1d\"",
+	"_lastModified": "Thu, 11 May 2017 16:12:31 GMT"
 }

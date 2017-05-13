@@ -596,13 +596,32 @@
 				"tarball": "https://registry.npmjs.org/es5-ext/-/es5-ext-0.10.15.tgz"
 			},
 			"_hasShrinkwrap": false
+		},
+		"0.10.16": {
+			"name": "es5-ext",
+			"version": "0.10.16",
+			"dependencies": {
+				"es6-iterator": "2",
+				"es6-symbol": "~3.1"
+			},
+			"devDependencies": {
+				"tad": "~0.2.7",
+				"xlint": "~0.2.2",
+				"xlint-jslint-medikoo": "~0.1.4"
+			},
+			"directories": {},
+			"dist": {
+				"shasum": "1ef1b04f3d09db6a5d630226d62202f2e425e45a",
+				"tarball": "https://registry.npmjs.org/es5-ext/-/es5-ext-0.10.16.tgz"
+			},
+			"_hasShrinkwrap": false
 		}
 	},
 	"name": "es5-ext",
 	"dist-tags": {
-		"latest": "0.10.15"
+		"latest": "0.10.16"
 	},
-	"modified": "2017-03-20T16:34:20.721Z",
-	"_etag": "W/\"58d0048c-2ad9\"",
-	"_lastModified": "Mon, 20 Mar 2017 16:34:20 GMT"
+	"modified": "2017-05-09T14:02:40.364Z",
+	"_etag": "W/\"5911cc00-2c40\"",
+	"_lastModified": "Tue, 09 May 2017 14:02:40 GMT"
 }

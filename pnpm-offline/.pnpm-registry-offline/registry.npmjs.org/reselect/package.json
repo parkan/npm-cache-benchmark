@@ -652,16 +652,53 @@
 				"tarball": "https://registry.npmjs.org/reselect/-/reselect-3.0.0.tgz"
 			},
 			"_hasShrinkwrap": false
+		},
+		"3.0.1": {
+			"name": "reselect",
+			"version": "3.0.1",
+			"devDependencies": {
+				"babel-cli": "^6.7.5",
+				"babel-plugin-check-es2015-constants": "^6.7.2",
+				"babel-plugin-transform-es2015-arrow-functions": "^6.5.2",
+				"babel-plugin-transform-es2015-block-scoping": "^6.7.1",
+				"babel-plugin-transform-es2015-function-name": "^6.5.0",
+				"babel-plugin-transform-es2015-modules-commonjs": "^6.7.4",
+				"babel-plugin-transform-es2015-modules-umd": "^6.6.5",
+				"babel-plugin-transform-es2015-parameters": "^6.7.0",
+				"babel-plugin-transform-es2015-shorthand-properties": "^6.5.0",
+				"babel-plugin-transform-es2015-spread": "^6.6.5",
+				"babel-plugin-transform-es2015-template-literals": "^6.6.5",
+				"babel-register": "^6.7.2",
+				"better-npm-run": "0.0.8",
+				"chai": "^3.0.0",
+				"codecov.io": "^0.1.6",
+				"coveralls": "^2.11.4",
+				"eslint": "^2.11",
+				"eslint-plugin-react": "^5.1.1",
+				"lodash.memoize": "^4.1.0",
+				"mkdirp": "^0.5.1",
+				"mocha": "^2.2.5",
+				"ncp": "^2.0.0",
+				"nyc": "^6.4.0",
+				"typescript": "^2.1.4",
+				"typings-tester": "^0.2.0"
+			},
+			"directories": {},
+			"dist": {
+				"shasum": "efdaa98ea7451324d092b2b2163a6a1d7a9a2147",
+				"tarball": "https://registry.npmjs.org/reselect/-/reselect-3.0.1.tgz"
+			},
+			"_hasShrinkwrap": false
 		}
 	},
 	"name": "reselect",
 	"dist-tags": {
-		"latest": "3.0.0",
+		"latest": "3.0.1",
 		"alpha": "1.0.0-alpha",
 		"rc1": "3.0.0-beta.1",
 		"rc": "3.0.0-rc"
 	},
-	"modified": "2017-05-08T15:37:25.678Z",
-	"_etag": "W/\"591090b5-4150\"",
-	"_lastModified": "Mon, 08 May 2017 15:37:25 GMT"
+	"modified": "2017-05-10T21:50:27.047Z",
+	"_etag": "W/\"59138b23-459d\"",
+	"_lastModified": "Wed, 10 May 2017 21:50:27 GMT"
 }
