@@ -3,7 +3,6 @@ const path = require('path');
 
 // modules
 const average = require('./src/average');
-const rm = require('./src/rm');
 const spawn = require('./src/spawn');
 const benchmarks = require('./benchmarks.json');
 
@@ -26,10 +25,10 @@ function runBenchmark(benchmark) {
   const key = getKey(benchmark);
   const result = results[key];
 
-  clean(benchmark);
+  clean();
   const time = measure(benchmark);
   verify(benchmark);
-  clean(benchmark);
+  clean();
 
   result.runs.push(time);
   result.average = average(result.runs);
@@ -44,9 +43,8 @@ function measure(benchmark) {
   return (end - start) / 1000;
 }
 
-function clean(benchmark) {
-  const dir = resolveDirectory(benchmark);
-  benchmark.clean.forEach(name => rm[name](dir));
+function clean() {
+  spawn('git', ['clean', '-dfX']);
 }
 
 function verify(benchmark) {

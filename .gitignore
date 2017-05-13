@@ -11,8 +11,8 @@ anonymous-cli-metrics.json
 index.dist.js
 
 npm/node_cache
-npm-package-lock/node_cache
-shrinkpack/node_cache
-shrinkpack-package-lock/node_cache
+pnpm/.pnpm-registry
+pnpm/.pnpm-store
 shrinkpack-compressed/node_cache
-shrinkpack-compressed-package-lock/node_cache
+shrinkpack/node_cache
+yarn/npm-packages-offline-cache
