@@ -1,4 +1,5 @@
 // node modules
+const fs = require('fs');
 const path = require('path');
 
 // modules
@@ -7,8 +8,8 @@ const spawn = require('./src/spawn');
 const benchmarks = require('./benchmarks.json');
 
 // implementation
-const sampleSize = 5;
 const results = benchmarks.reduce(registerBenchmark, {});
+const sampleSize = 5;
 
 try {
   for (let i = 1; i <= sampleSize; i++) {
@@ -16,9 +17,18 @@ try {
     benchmarks.forEach(runBenchmark);
     console.log('');
   }
+  const file = path.resolve('./results.json');
+  const contents = JSON.stringify(results, null, 2);
+  fs.writeFileSync(file, contents);
 } catch (err) {
   console.error(err);
   process.exit(1);
+}
+
+function registerBenchmark(index, benchmark) {
+  const key = getKey(benchmark);
+  index[key] = { average: 0, name: benchmark.name, runs: [] };
+  return index;
 }
 
 function runBenchmark(benchmark) {
@@ -43,19 +53,13 @@ function measure(benchmark) {
   return (end - start) / 1000;
 }
 
-function clean() {
-  spawn('git', ['clean', '-dfX']);
-}
-
 function verify(benchmark) {
   const dir = resolveDirectory(benchmark);
   spawn('node', ['./verify.js'], dir);
 }
 
-function registerBenchmark(index, benchmark) {
-  const key = getKey(benchmark);
-  index[key] = { average: 0, name: benchmark.name, runs: [] };
-  return index;
+function clean() {
+  spawn('git', ['clean', '-dfX']);
 }
 
 function resolveDirectory(benchmark) {
