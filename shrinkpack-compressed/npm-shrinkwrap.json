@@ -135,9 +135,9 @@
       "resolved": "./node_shrinkwrap/core-util-is-1.0.2.tgz"
     },
     "create-react-class": {
-      "version": "15.5.2",
+      "version": "15.5.3",
       "from": "create-react-class@>=15.5.1 <16.0.0",
-      "resolved": "./node_shrinkwrap/create-react-class-15.5.2.tgz"
+      "resolved": "./node_shrinkwrap/create-react-class-15.5.3.tgz"
     },
     "cryptiles": {
       "version": "2.0.5",
@@ -411,9 +411,9 @@
       "resolved": "./node_shrinkwrap/errorhandler-1.5.0.tgz"
     },
     "es5-ext": {
-      "version": "0.10.15",
+      "version": "0.10.16",
       "from": "es5-ext@>=0.10.14 <0.11.0",
-      "resolved": "./node_shrinkwrap/es5-ext-0.10.15.tgz"
+      "resolved": "./node_shrinkwrap/es5-ext-0.10.16.tgz"
     },
     "es6-error": {
       "version": "4.0.2",
@@ -824,9 +824,9 @@
       "resolved": "./node_shrinkwrap/promise-7.1.1.tgz"
     },
     "prop-types": {
-      "version": "15.5.8",
+      "version": "15.5.10",
       "from": "prop-types@>=15.5.7 <16.0.0",
-      "resolved": "./node_shrinkwrap/prop-types-15.5.8.tgz"
+      "resolved": "./node_shrinkwrap/prop-types-15.5.10.tgz"
     },
     "punycode": {
       "version": "1.4.1",

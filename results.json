@@ -1,0 +1,145 @@
+{
+  "npm/npm": {
+    "average": 29.729200000000002,
+    "name": "npm 4.x",
+    "runs": [
+      31.014,
+      30.449,
+      30.492,
+      29.292,
+      27.399
+    ]
+  },
+  "npm/npm-cached": {
+    "average": 13.474799999999998,
+    "name": "npm 4.x (cached)",
+    "runs": [
+      12.451,
+      13.829,
+      13.104,
+      13.013,
+      14.977
+    ]
+  },
+  "npm/shrinkpack": {
+    "average": 18.782,
+    "name": "npm 4.x (shrinkpacked)",
+    "runs": [
+      17.508,
+      19.62,
+      18.759,
+      19.005,
+      19.018
+    ]
+  },
+  "npm/shrinkpack-compressed": {
+    "average": 18.734,
+    "name": "npm 4.x (shrinkpacked, compressed)",
+    "runs": [
+      20.994,
+      18.183,
+      18.08,
+      18.431,
+      17.982
+    ]
+  },
+  "yarn/yarn": {
+    "average": 13.7066,
+    "name": "yarn",
+    "runs": [
+      13.704,
+      13.502,
+      13.647,
+      13.618,
+      14.062
+    ]
+  },
+  "yarn/yarn-offline": {
+    "average": 5.881399999999999,
+    "name": "yarn --offline",
+    "runs": [
+      6.922,
+      5.688,
+      5.56,
+      5.212,
+      6.025
+    ]
+  },
+  "npm5/npm": {
+    "average": 14.928,
+    "name": "npm 5.x",
+    "runs": [
+      14.218,
+      14.926,
+      15.501,
+      13.478,
+      16.517
+    ]
+  },
+  "npm5/npm-cached": {
+    "average": 11.3572,
+    "name": "npm 5.x (cached)",
+    "runs": [
+      11.211,
+      12.003,
+      10.715,
+      11.547,
+      11.31
+    ]
+  },
+  "npm5/shrinkpack": {
+    "average": 8.9404,
+    "name": "npm 5.x (shrinkpacked)",
+    "runs": [
+      8.32,
+      8.29,
+      8.853,
+      10.288,
+      8.951
+    ]
+  },
+  "npm5/shrinkpack-compressed": {
+    "average": 8.348400000000002,
+    "name": "npm 5.x (shrinkpacked, compressed)",
+    "runs": [
+      8.582,
+      8.398,
+      8.05,
+      8.341,
+      8.371
+    ]
+  },
+  "pnpm/pnpm": {
+    "average": 17.5744,
+    "name": "pnpm",
+    "runs": [
+      17.779,
+      17.398,
+      17.206,
+      17.322,
+      18.167
+    ]
+  },
+  "pnpm/pnpm-cached": {
+    "average": 6.861200000000001,
+    "name": "pnpm (cached)",
+    "runs": [
+      7.142,
+      7.008,
+      6.337,
+      6.777,
+      7.042
+    ]
+  },
+  "pnpm/pnpm-offline": {
+    "average": 6.7177999999999995,
+    "name": "pnpm --offline",
+    "runs": [
+      7.28,
+      6.391,
+      6.46,
+      6.546,
+      6.912
+    ]
+  }
+}

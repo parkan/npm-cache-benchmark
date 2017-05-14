@@ -1,96 +1,71 @@
+// node modules
+const fs = require('fs');
 const path = require('path');
-const childProcess = require('child_process');
 
-const results = {
-  'npm/npm': { average: 0, name: 'npm 4.x', runs: [] },
-  'npm/npm-cached': { average: 0, name: 'npm 4.x (cached)', runs: [] },
-  'npm/shrinkpack': { average: 0, name: 'npm 4.x (shrinkpacked)', runs: [] },
-  'npm/shrinkpack-compressed': { average: 0, name: 'npm 4.x (shrinkpacked, compressed)', runs: [] },
-  'yarn/yarn': { average: 0, name: 'yarn', runs: [] },
-  'yarn/yarn-offline': { average: 0, name: 'yarn --offline', runs: [] },
-  'npm5/npm': { average: 0, name: 'npm 5.x', runs: [] },
-  'npm5/npm-cached': { average: 0, name: 'npm 5.x (cached)', runs: [] },
-  'npm5/shrinkpack': { average: 0, name: 'npm 5.x (shrinkpacked)', runs: [] },
-  'npm5/shrinkpack-compressed': { average: 0, name: 'npm 5.x (shrinkpacked, compressed)', runs: [] }
-};
-
-try {
-  runAll();
-} catch (err) {
-  onError(err);
-}
+// modules
+const average = require('./src/average');
+const spawn = require('./src/spawn');
+const benchmarks = require('./benchmarks.json');
 
 // implementation
+const results = benchmarks.reduce(registerBenchmark, {});
+const sampleSize = 5;
 
-function runAll() {
-  const sampleSize = 5;
+try {
   for (let i = 1; i <= sampleSize; i++) {
     console.log(`Run ${i}`);
-    runBenchmark('npm', ['install'], 'npm');
-    runBenchmark('npm', ['install'], 'npm-cached');
-    runBenchmark('npm', ['install'], 'shrinkpack');
-    runBenchmark('npm', ['install'], 'shrinkpack-compressed');
-    runBenchmark('yarn', ['install'], 'yarn');
-    runBenchmark('yarn', ['install', '--offline'], 'yarn-offline');
-    runBenchmark('npm5', ['install'], 'npm');
-    runBenchmark('npm5', ['install'], 'npm-cached');
-    runBenchmark('npm5', ['install'], 'shrinkpack');
-    runBenchmark('npm5', ['install'], 'shrinkpack-compressed');
+    benchmarks.forEach(runBenchmark);
     console.log('');
   }
+  const file = path.resolve('./results.json');
+  const contents = JSON.stringify(results, null, 2);
+  fs.writeFileSync(file, contents);
+} catch (err) {
+  console.error(err);
+  process.exit(1);
 }
 
-function runBenchmark(installer, args, directory) {
-  const key = `${installer}/${directory}`;
-  const dirPath = path.resolve(directory);
+function registerBenchmark(index, benchmark) {
+  const key = getKey(benchmark);
+  index[key] = { average: 0, name: benchmark.name, runs: [] };
+  return index;
+}
 
-  clean(dirPath);
-  const start = new Date().getTime();
-  spawn(installer, args, dirPath);
-  const end = new Date().getTime();
-  verify(dirPath);
-  clean(dirPath);
-
-  const time = (end - start) / 1000;
+function runBenchmark(benchmark) {
+  const key = getKey(benchmark);
   const result = results[key];
+
+  clean();
+  const time = measure(benchmark);
+  verify(benchmark);
+  clean();
+
   result.runs.push(time);
   result.average = average(result.runs);
-
   console.log(`${result.name}: ${time.toFixed(2)}s (average ${result.average.toFixed(2)}s)`);
 }
 
-function spawn(cmd, args, cwd) {
-  const shell = childProcess.spawnSync(cmd, args, {
-    cwd: cwd || process.cwd(),
-    encoding: 'utf-8',
-    stdio: 'pipe'
-  });
-  const stdout = shell.output[1];
-  const stderr = shell.output[2];
-  shell.status !== 0 && onError(stderr);
+function measure(benchmark) {
+  const dir = resolveDirectory(benchmark);
+  const start = new Date().getTime();
+  spawn(benchmark.installer, benchmark.args, dir);
+  const end = new Date().getTime();
+  return (end - start) / 1000;
 }
 
-function clean(dirPath) {
-  if (dirPath.includes('-cached') === false) {
-    spawn('npm', ['cache', 'clean'], dirPath);
-    spawn('npm5', ['cache', 'clean', '--force'], dirPath);
-    spawn('yarn', ['cache', 'clean'], dirPath);
-  }
-  if (dirPath.includes('-offline') === false) {
-    spawn('rm', ['-rf', path.join(dirPath, 'npm-packages-offline-cache')]);
-  }
-  spawn('rm', ['-rf', path.join(dirPath, 'node_modules')]);
+function verify(benchmark) {
+  const dir = resolveDirectory(benchmark);
+  spawn('node', ['./verify.js'], dir);
 }
 
-function verify(dirPath) {
-  spawn('node', ['./verify.js'], dirPath);
+function clean() {
+  spawn('git', ['clean', '-dfX']);
 }
 
-function average(list) {
-  return list.reduce((total, value) => total + value, 0) / list.length;
+function resolveDirectory(benchmark) {
+  return path.resolve(benchmark.directory);
 }
 
-function onError(err) {
-  console.error(err);
-  process.exit(1);
+function getKey(benchmark) {
+  return `${benchmark.installer}/${benchmark.directory}`;
 }

@@ -1,5 +1,5 @@
 {
-  "name": "yarn",
+  "name": "yarn-offline",
   "version": "0.0.0",
   "dependencies": {
     "chai": "3.5.0",

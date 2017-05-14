@@ -1,0 +1,80 @@
+[
+  {
+    "name": "npm 4.x",
+    "installer": "npm",
+    "args": ["install"],
+    "directory": "npm"
+  },
+  {
+    "name": "npm 4.x (cached)",
+    "installer": "npm",
+    "args": ["install"],
+    "directory": "npm-cached"
+  },
+  {
+    "name": "npm 4.x (shrinkpacked)",
+    "installer": "npm",
+    "args": ["install"],
+    "directory": "shrinkpack"
+  },
+  {
+    "name": "npm 4.x (shrinkpacked, compressed)",
+    "installer": "npm",
+    "args": ["install"],
+    "directory": "shrinkpack-compressed"
+  },
+  {
+    "name": "yarn",
+    "installer": "yarn",
+    "args": ["install"],
+    "directory": "yarn"
+  },
+  {
+    "name": "yarn --offline",
+    "installer": "yarn",
+    "args": ["install", "--offline"],
+    "directory": "yarn-offline"
+  },
+  {
+    "name": "npm 5.x",
+    "installer": "npm5",
+    "args": ["install"],
+    "directory": "npm"
+  },
+  {
+    "name": "npm 5.x (cached)",
+    "installer": "npm5",
+    "args": ["install"],
+    "directory": "npm-cached"
+  },
+  {
+    "name": "npm 5.x (shrinkpacked)",
+    "installer": "npm5",
+    "args": ["install"],
+    "directory": "shrinkpack"
+  },
+  {
+    "name": "npm 5.x (shrinkpacked, compressed)",
+    "installer": "npm5",
+    "args": ["install"],
+    "directory": "shrinkpack-compressed"
+  },
+  {
+    "name": "pnpm",
+    "installer": "pnpm",
+    "args": ["install"],
+    "directory": "pnpm"
+  },
+  {
+    "name": "pnpm (cached)",
+    "installer": "pnpm",
+    "args": ["install"],
+    "directory": "pnpm-cached"
+  },
+  {
+    "name": "pnpm --offline",
+    "installer": "pnpm",
+    "args": ["install", "--offline"],
+    "directory": "pnpm-offline"
+  }
+]
